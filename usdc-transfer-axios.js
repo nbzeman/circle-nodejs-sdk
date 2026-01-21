@@ -1,5 +1,8 @@
+// transaction
+
+require('dotenv').config();
 const axios = require('axios');
-const { v4: uuidv4 } = require('uuid'); // Required for idempotency key
+const { ethers } = require('ethers');
 
 const options = {
   method: 'POST',
@@ -30,3 +33,4 @@ axios
   .catch(function (error) {
     console.error(JSON.stringify(error));
   });
+sendUSDCTransfer();
